@@ -1,0 +1,26 @@
+{
+  "name": "curruncy-converter-kathan",
+  "version": "1.0.0",
+  "type": "module", 
+  "description": "npm package",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kathan-shah1893/curruncy-converter-kathan.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "kathan shah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kathan-shah1893/curruncy-converter-kathan/issues"
+  },
+  "homepage": "https://github.com/kathan-shah1893/curruncy-converter-kathan#readme",
+  "dependencies": {
+    "@everapi/freecurrencyapi-js": "^1.0.1"
+  }
+}
