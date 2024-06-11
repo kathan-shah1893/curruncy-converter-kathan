@@ -1,55 +1,46 @@
-**currency-converter-kathan**
+# currency-converter-kathan
 
-**A Powerful and Flexible Node.js Module for Currency Conversion**
+`currency-converter-kathan` is a simple and efficient Node.js module for converting currencies. It allows you to easily convert an amount from one currency to another using the latest exchange rates.
 
-This module offers a streamlined and reliable approach to converting currencies within your Node.js applications. It provides accurate conversion rates and supports a wide range of currencies.
+## Installation
 
-**Installation**
-
-Install the module using npm:
+To install the module, use npm:
 
 ```bash
 npm install currency-converter-kathan
 ```
 
-**Usage**
+## Usage
 
-The `currency-converter-kathan` module exposes a single function, `frequency`, for performing currency conversion. Here's how to use it:
+To use the `currency-converter-kathan` module, import it into your project and call the `frequency` function. The `frequency` function takes three parameters: the source currency code, the target currency code, and the amount to be converted. It returns a promise that resolves to the converted amount.
+
+### Example
 
 ```javascript
-import { frequency } from "curruncy-converter-kathan"
+import { frequency } from "currency-converter-kathan";
 
-frequency('USD', 'INR', 10) // Convert 10 USD to INR
-    .then(result => {
-        console.log(`The conversion rate is: ${result}`);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+// Convert 10 USD to INR
+frequency("USD", "INR", 10).then((res) => {
+  console.log(res);
+}).catch((err) => {
+  console.error(err);
+});
 ```
 
-**Explanation**
+## API
 
-- **`currencyConverter.frequency(fromCurrency, toCurrency, amount)`:**
-    - `fromCurrency`: The three-letter ISO 4217 code of the source currency (e.g., 'USD', 'EUR').
-    - `toCurrency`: The three-letter ISO 4217 code of the target currency (e.g., 'INR', 'JPY').
-    - `amount`: The numerical value in the source currency to be converted.
-- **`then(result => ...)`:** This callback is executed when the conversion is successful.
-    - `result`: The exchange rate between the two currencies.
-- **`catch(error => ...)`:** This callback handles any errors that might occur during the conversion process.
+### `frequency(fromCurrency, toCurrency, amount)`
 
-**Features**
+- `fromCurrency` (string): The currency code you want to convert from (e.g., "USD").
+- `toCurrency` (string): The currency code you want to convert to (e.g., "INR").
+- `amount` (number): The amount of the source currency you want to convert.
 
-- **Accurate Conversion Rates:** Leverages reliable data sources to provide up-to-date exchange rates.
-- **Wide Currency Support:** Supports a comprehensive list of currencies, giving you flexibility.
-- **Asynchronous Operation:** Performs conversions asynchronously using Promises, ensuring non-blocking behavior in your Node.js application.
-- **Error Handling:** Includes error handling to gracefully manage potential issues during the conversion process.
+Returns a promise that resolves to the converted amount.
 
-**Contributing**
+## Contributing
 
-We welcome contributions to this project! Feel free to submit pull requests for bug fixes, enhancements, or additional features.
+If you have any ideas, suggestions, or issues, feel free to open an issue or submit a pull request.
 
-**Additional Notes**
+---
 
-- The actual exchange rates used by the module might be subject to change. Consider implementing a caching mechanism or setting a custom update frequency if real-time rates are crucial for your application.
-- Explore external currency data APIs or other sources for potentially more extensive data or customization options.
+Happy coding!
